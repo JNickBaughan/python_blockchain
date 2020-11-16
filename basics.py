@@ -23,6 +23,16 @@ print(name)
 print(separator)
 
 
+long_text = """This text spans multiple
+different lines. It is very 
+very long"""
+
+print(long_text)
+
+
+print(separator)
+
+
 trueNumber = int(True)
 
 falseNumber = int(False)
