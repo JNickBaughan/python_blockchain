@@ -25,9 +25,16 @@ def print_block(index = 0):
         print('ERROR: index is out of range')
 
 
-add_value(3.4)
-add_value(2)
-add_value(7.2)
+def get_user_input():
+    amount = float(input('Enter an amount please: '))
+    add_value(amount)
+
+
+get_user_input()
+get_user_input()
+get_user_input()
+
+
 
 print_entire_blockchain()
 print_block(0)
