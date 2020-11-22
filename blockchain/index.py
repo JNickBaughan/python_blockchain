@@ -33,10 +33,11 @@ def print_each_block():
     for block in blockchain:
         print(block)
 
-
-get_user_input()
-get_user_input()
-get_user_input()
+add_modeValues = True
+while add_modeValues: 
+    get_user_input()
+    user_input = input('Do you have more values to add?') 
+    add_modeValues = user_input != "no"
 
 
 
