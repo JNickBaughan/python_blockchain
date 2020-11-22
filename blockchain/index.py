@@ -29,6 +29,10 @@ def get_user_input():
     amount = float(input('Enter an amount please: '))
     add_value(amount)
 
+def print_each_block():
+    for block in blockchain:
+        print(block)
+
 
 get_user_input()
 get_user_input()
@@ -42,3 +46,5 @@ print_block(0)
 print_block(4)
 
 print_block(-1)
+
+print_each_block()
