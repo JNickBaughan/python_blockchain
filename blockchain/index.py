@@ -25,29 +25,47 @@ def print_block(index = 0):
         print('ERROR: index is out of range')
 
 
-def get_user_input():
-    amount = float(input('Enter an amount please: '))
+def add_user_amount():
+    amount = float(input('Enter new block value: '))
     add_value(amount)
+
+def get_block_to_print():
+    index = input('What index would you like to print: ')
+    if index.isnumeric():
+        print_block(int(index))
+    else:
+        print('index must be numeric')
+        get_block_to_print()
+    
+
+def get_user_input():
+    return input('Enter your choice: ')
+    
 
 def print_each_block():
     for block in blockchain:
         print(block)
 
 def run_program():
-    add_nodeValues = True
-    while add_nodeValues: 
-        get_user_input()
-        user_input = input('Do you have more values to add?') 
-        add_nodeValues = user_input != "no"
-
+    while True:
+        print('what would you like to do?')
+        print('1: add a new block to the chain')
+        print('2: print the blockchain')
+        print('3: print a value from the blockchain')
+        print('4: print each value from the blockchain')
+        print('or quit the program')
+        user_choice = get_user_input()
+        if user_choice == '1':
+            add_user_amount()
+        elif user_choice == '2':
+            print_entire_blockchain()
+        elif user_choice == '3':
+            get_block_to_print()
+        elif user_choice == '4':
+            print_each_block()
+        else:
+            break
 
 run_program()
 
-print_entire_blockchain()
-print_block(0)
-
-print_block(4)
-
-print_block(-1)
-
-print_each_block()
+print('bye')
